@@ -1,0 +1,36 @@
+format = """
+$username\
+$directory\
+$git_branch\
+$git_status\
+$time
+$character"""
+
+[username]
+show_always = true
+style_user = "bold #89b4fa"
+style_root = "bold #f38ba8"
+format = "[╭─ $user]($style) "
+
+[directory]
+style = "bold #74c7ec"
+truncation_length = 3
+format = "[ $path]($style) "
+
+[git_branch]
+style = "bold #b4befe"
+format = "[ $branch]($style)"
+
+[git_status]
+style = "bold #a6e3a1"
+format = " [$all_status$ahead_behind]($style) "
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "bold #ff66cc"
+format = "[ $time]($style) "
+
+[character]
+success_symbol = "[╰─❯](#89b4fa)"
+error_symbol = "[╰─✗](#f38ba8)"
